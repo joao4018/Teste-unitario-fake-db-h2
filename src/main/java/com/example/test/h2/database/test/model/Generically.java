@@ -1,23 +1,20 @@
 package com.example.test.h2.database.test.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
-
-public class GenericEntity {
+public class Generically {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String value;
+    @Column
+    private String namess;
 
-    public GenericEntity(String value) {
-        this.value = value;
+    public Generically(String value) {
+        this.namess = value;
     }
 
-    public GenericEntity( ) {
+    public Generically( ) {
 
     }
 
@@ -31,11 +28,11 @@ public class GenericEntity {
     }
 
     public String getValue() {
-        return value;
+        return namess;
     }
 
     public void setValue(String value) {
-        this.value = value;
+        this.namess = value;
     }
 
     //standard constructors, getters, setters
